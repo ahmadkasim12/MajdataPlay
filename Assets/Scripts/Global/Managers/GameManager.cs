@@ -196,7 +196,8 @@ namespace MajdataPlay
         void EnterTitle()
         {
             MajEnv.GameProcess.PriorityClass = MajEnv.UserSettings.Debug.ProcessPriority;
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadSceneAsync("Title", LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("Init", UnloadSceneOptions.None);
         }
         void EnterView()
         {
