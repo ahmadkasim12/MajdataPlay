@@ -176,7 +176,7 @@ namespace MajdataPlay.Title
             _flag = false;
             MajInstances.AudioManager.StopSFX("bgm_title.mp3");
             MajInstances.AudioManager.StopSFX("MajdataPlay.wav");
-            MajInstances.SceneSwitcher.SwitchScene("SensorTest");
+            MajInstances.SceneSwitcher.SwitchScene("SensorTest", "Title");
         }
         void NextScene()
         {
@@ -185,7 +185,7 @@ namespace MajdataPlay.Title
             _flag = false;
             MajInstances.AudioManager.StopSFX("bgm_title.mp3");
             MajInstances.AudioManager.StopSFX("MajdataPlay.wav");
-            MajInstances.SceneSwitcher.SwitchScene("List", false);
+            MajInstances.SceneSwitcher.SwitchScene("List", "Title", false);
         }
     }
 }

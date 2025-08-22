@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4451172175426913847, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4296700905114274833, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -353,6 +357,26 @@ PrefabInstance:
     - target: {fileID: 3668888808494289767, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670431835190123096, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670431835190123096, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670431835190123096, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670431835190123096, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670431835190123096, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4484653850034527598, guid: 4cbf0dbca1ca1a5499c4b7806ab6aac5, type: 3}
       propertyPath: m_Materials.Array.data[0]

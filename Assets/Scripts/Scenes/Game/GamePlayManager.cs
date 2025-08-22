@@ -1022,11 +1022,11 @@ namespace MajdataPlay.Game
             await UniTask.Delay(200);
             if(_gameInfo.NextRound())
             {
-                MajInstances.SceneSwitcher.SwitchScene("Game",false);
+                MajInstances.SceneSwitcher.SwitchScene("Game", "Game", false);
             }
             else
             {
-                MajInstances.SceneSwitcher.SwitchScene("Result");
+                MajInstances.SceneSwitcher.SwitchScene("Result", "Game");
             }
         }
         async UniTaskVoid FastRetry()
@@ -1043,7 +1043,7 @@ namespace MajdataPlay.Game
             MajInstances.SceneSwitcher.FadeIn();
             await UniTask.Delay(400);
             ClearAllResources();
-            MajInstances.SceneSwitcher.SwitchScene("Game", false);
+            MajInstances.SceneSwitcher.SwitchScene("Game", "Game", false);
         }
 
         public void GameOver()
@@ -1068,7 +1068,7 @@ namespace MajdataPlay.Game
                 await UniTask.Yield();
             }
             _sceneSwitcher.SetLoadingText(string.Empty);
-            sceneSwitcher.SwitchScene("List",false);
+            sceneSwitcher.SwitchScene("List", "Game", false);
         }
         public async UniTaskVoid EndGame(int delayMiliseconds = 100,string targetScene = "Result")
         {
@@ -1082,7 +1082,7 @@ namespace MajdataPlay.Game
             ClearAllResources();
             await UniTask.DelayFrame(5);
             
-            MajInstances.SceneSwitcher.SwitchScene(targetScene);
+            MajInstances.SceneSwitcher.SwitchScene(targetScene, "Game");
         }
 
         #endregion

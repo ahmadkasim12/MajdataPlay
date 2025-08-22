@@ -158,7 +158,7 @@ namespace MajdataPlay.List
                                     //MajInstances.GameManager.DanHP = SongStorage.WorkingCollection.DanInfo.StartHP;
                                     //MajInstances.GameManager.DanResults.Clear();
                                     _coverListDisplayer.SelectedCollection.Index = 0;
-                                    MajInstances.SceneSwitcher.SwitchScene("Game", false);
+                                    MajInstances.SceneSwitcher.SwitchScene("Game", "List", false);
                                 }
                                 else
                                 {
@@ -192,7 +192,7 @@ namespace MajdataPlay.List
                                     Majdata<GameInfo>.Instance = info;
                                     _pressTime = 0;
                                     _isPressed = false;
-                                    MajInstances.SceneSwitcher.SwitchScene("Practice", false);
+                                    MajInstances.SceneSwitcher.SwitchScene("Practice", "List", false);
                                 }
                                 else
                                 {
@@ -200,7 +200,7 @@ namespace MajdataPlay.List
                                     Majdata<GameInfo>.Instance = info;
                                     _pressTime = 0;
                                     _isPressed = false;
-                                    MajInstances.SceneSwitcher.SwitchScene("Game", false);
+                                    MajInstances.SceneSwitcher.SwitchScene("Game", "List",false);
                                 }
                             }
                             break;
@@ -236,7 +236,7 @@ namespace MajdataPlay.List
                             break;
                         case SensorArea.P1:
                             InputManager.UnbindAnyArea(OnAreaDown);
-                            MajInstances.SceneSwitcher.SwitchScene("SortFind");
+                            MajInstances.SceneSwitcher.SwitchScene("SortFind", "List");
                             break;
                         case SensorArea.A5:
                             if (_coverListDisplayer.IsChartList)
@@ -256,12 +256,12 @@ namespace MajdataPlay.List
                         case SensorArea.A7:
                             InputManager.UnbindAnyArea(OnAreaDown);
                             MajInstances.GameManager.LastSettingPage = 0;
-                            MajInstances.SceneSwitcher.SwitchScene("Setting");
+                            MajInstances.SceneSwitcher.SwitchScene("Setting", "List");
                             break;
                         case SensorArea.A2:
                             InputManager.UnbindAnyArea(OnAreaDown);
                             MajInstances.GameManager.LastSettingPage = 4;
-                            MajInstances.SceneSwitcher.SwitchScene("Setting");
+                            MajInstances.SceneSwitcher.SwitchScene("Setting", "List");
                             break;
                     }
                 }

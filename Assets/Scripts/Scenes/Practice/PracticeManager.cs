@@ -86,7 +86,7 @@ namespace MajdataPlay.Practice
 
             if (string.IsNullOrEmpty(maidata))
             {
-                MajInstances.SceneSwitcher.SwitchScene("List", false);
+                MajInstances.SceneSwitcher.SwitchScene("List", "Practice", false);
             }
 
             var simaiParser = SimaiParser.Shared;
@@ -130,10 +130,10 @@ namespace MajdataPlay.Practice
                 {
                     case SensorArea.A4:
                         _gameInfo.TimeRange = new Range<double>(startTime, endTime);
-                        MajInstances.SceneSwitcher.SwitchScene("Game", false);
+                        MajInstances.SceneSwitcher.SwitchScene("Game", "Practice", false);
                         break;
                     case SensorArea.A5:
-                        MajInstances.SceneSwitcher.SwitchScene("List", false);
+                        MajInstances.SceneSwitcher.SwitchScene("List", "Practice", false);
                         break;
                 }
                 return;

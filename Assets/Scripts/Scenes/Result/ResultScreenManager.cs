@@ -258,7 +258,7 @@ namespace MajdataPlay.Result
                             if (!canNextRound)
                             {
                                 InputManager.UnbindAnyArea(OnAreaDown);
-                                MajInstances.SceneSwitcher.SwitchScene("TotalResult");
+                                MajInstances.SceneSwitcher.SwitchScene("TotalResult", "Result");
                                 return;
 
                             }
@@ -271,13 +271,13 @@ namespace MajdataPlay.Result
                                 //SongStorage.WorkingCollection.Index++;
                                 //MajInstances.GameManager.DanHP += SongStorage.WorkingCollection.DanInfo.RestoreHP;
 
-                                MajInstances.SceneSwitcher.SwitchScene("Game", false);
+                                MajInstances.SceneSwitcher.SwitchScene("Game", "Result", false);
                                 return;
                             }
                         }
                         InputManager.UnbindAnyArea(OnAreaDown);
                         MajInstances.AudioManager.StopSFX("bgm_result.mp3");
-                        MajInstances.SceneSwitcher.SwitchScene("List", false);
+                        MajInstances.SceneSwitcher.SwitchScene("List", "Result", false);
                         return;
                     case SensorArea.A5:
                         favoriteAdder.FavoratePressed();

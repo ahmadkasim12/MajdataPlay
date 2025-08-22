@@ -94,7 +94,7 @@ namespace MajdataPlay.SortFind
             var orderBy = SongStorage.OrderBy;
             orderBy.Keyword = SearchBar.text;
             orderBy.SortBy = sortType;
-            MajInstances.SceneSwitcher.SwitchScene("List", false);
+            MajInstances.SceneSwitcher.SwitchScene("List", "SortFind", false);
         }
     }
 }

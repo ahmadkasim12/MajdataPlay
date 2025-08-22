@@ -75,7 +75,7 @@ namespace MajdataPlay.Test
             if (_exitBtnPressTime >= 5)
             {
                 _exitFlag = true;
-                MajInstances.SceneSwitcher.SwitchScene(NextScene);
+                MajInstances.SceneSwitcher.SwitchScene(NextScene, "Test");
                 MajEnv.Mode = RunningMode.Play;
             }
         }

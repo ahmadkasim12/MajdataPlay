@@ -117,11 +117,11 @@ namespace MajdataPlay.Setting
                 MajInstances.AudioManager.ReadVolumeFromSettings();
                 if(MajEnv.Mode == RunningMode.View)
                 {
-                    MajInstances.SceneSwitcher.SwitchScene("View");
+                    MajInstances.SceneSwitcher.SwitchScene("View", "Setting");
                 }
                 else
                 {
-                    MajInstances.SceneSwitcher.SwitchScene("List", false);
+                    MajInstances.SceneSwitcher.SwitchScene("List", "Setting", false);
                 }
                 return;
             }

@@ -58,9 +58,9 @@ namespace MajdataPlay
             _canvas.worldCamera = MainCamera;
         }
 
-        public void SwitchScene(string sceneName, bool autoFadeOut = true)
+        public void SwitchScene(string sceneName, string exitSceneName, bool autoFadeOut = true)
         {
-            SwitchSceneInternal(sceneName,autoFadeOut).Forget();
+            SwitchSceneInternal(sceneName, exitSceneName,autoFadeOut).Forget();
         }
 
         public void FadeOut()
@@ -87,7 +87,7 @@ namespace MajdataPlay
             loadingText.color = Color.white;
         }
 
-        async UniTask SwitchSceneInternal(string sceneName, bool autoFadeOut)
+        async UniTask SwitchSceneInternal(string sceneName, string exitSceneName, bool autoFadeOut)
         {
             InputManager.ClearAllSubscriber();
             SubImage.sprite = MajInstances.SkinManager.SelectedSkin.SubDisplay;
@@ -97,7 +97,8 @@ namespace MajdataPlay
             animator.SetBool("In", true);
             await UniTask.Delay(SWITCH_ELAPSED);
             LedRing.SetAllLight(LoadingLightColor);
-            await SceneManager.LoadSceneAsync(sceneName);
+            await SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            await SceneManager.UnloadSceneAsync(exitSceneName, UnloadSceneOptions.None);
             await UniTask.DelayFrame(2);
             if(autoFadeOut)
             { 
