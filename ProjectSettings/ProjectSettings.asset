@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
@@ -702,7 +702,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: dUI_TextMeshPro
+    Android: dUI_TextMeshPro;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     EmbeddedLinux: dUI_TextMeshPro
     GameCoreScarlett: dUI_TextMeshPro
     GameCoreXboxOne: dUI_TextMeshPro
@@ -712,10 +712,10 @@ PlayerSettings:
     PS5: dUI_TextMeshPro
     QNX: dUI_TextMeshPro
     Stadia: dUI_TextMeshPro
-    Standalone: dUI_TextMeshPro
+    Standalone: dUI_TextMeshPro;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     VisionOS: dUI_TextMeshPro
     WebGL: dUI_TextMeshPro
-    Windows Store Apps: dUI_TextMeshPro
+    Windows Store Apps: dUI_TextMeshPro;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     XboxOne: dUI_TextMeshPro
     iPhone: dUI_TextMeshPro
     tvOS: dUI_TextMeshPro
@@ -827,7 +827,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 3
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
